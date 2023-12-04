@@ -103,4 +103,9 @@ impl Client {
         );
         Ok(result)
     }
+
+    /// Return the project ID associated with this client.
+    pub fn project(&self) -> String {
+        crate::SERVICE_ACCOUNT.project_id.clone()
+    }
 }
